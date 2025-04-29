@@ -40,7 +40,7 @@ The dataset is sourced from **IMDb** and contains:
 | Logistic Regression  | *34.91%* |
 | Random Forest        | *1.03%*  |
 | SVM                  | *40.02%* |
-| BERT                 | **XX.XX%** (Best) |
+| BERT                 | **51.62%** (Best) |
 
 *BERT outperformed traditional models due to its contextual understanding of movie descriptions.*
 
@@ -58,8 +58,7 @@ git clone https://github.com/your-username/movie-genre-classification.git
 cd movie-genre-classification
 
 ### 2. Install Dependencies
-Copy
-Edit
+
 pip install -r requirements.txt
 The requirements.txt includes:
 
@@ -81,26 +80,20 @@ transformers
 
 datasets
 
-3. Prepare the Dataset
+### 3. Prepare the Dataset
 Download the IMDb Genre Classification Dataset manually (train/test files).
 
 Place them in a data/ folder like this:
 
-kotlin
-Copy
-Edit
 movie-genre-classification/
 └── data/
     ├── train_data.txt
     ├── test_data.txt
     ├── test_data_solution.txt
     └── description.txt
-4. Run the Notebook
+### 4. Run the Notebook
 Open the provided notebook under notebooks/ using:
 
-bash
-Copy
-Edit
 jupyter notebook
 Or upload it back to Kaggle for easy GPU access.
 
@@ -114,7 +107,7 @@ Model Training (Logistic Regression, Random Forest, SVM, BERT)
 
 Model Evaluation and Visual Comparison
 
-5. Download Trained Models (if running on Kaggle)
+### 5. Download Trained Models (if running on Kaggle)
 After training in Kaggle:
 
 Use download links generated at notebook end
@@ -133,12 +126,9 @@ svm_model.pkl
 
 bert_genre_classifier.zip
 
-6. Predict Using Saved Models
+### 6. Predict Using Saved Models
 ✅ Traditional Models (Logistic Regression / SVM / Random Forest):
 
-python
-Copy
-Edit
 import joblib
 
 # Load TF-IDF vectorizer
@@ -154,9 +144,6 @@ description_vectorized = vectorizer.transform([description_clean])
 predictions = model.predict(description_vectorized)
 ✅ BERT Model:
 
-python
-Copy
-Edit
 from transformers import BertTokenizer, BertForSequenceClassification
 import torch
 
