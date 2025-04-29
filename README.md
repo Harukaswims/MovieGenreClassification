@@ -40,7 +40,7 @@ The dataset is sourced from **IMDb** and contains:
 | Logistic Regression  | *34.91%* |
 | Random Forest        | *1.03%*  |
 | SVM                  | *40.02%* |
-| BERT                 | **51.62%** (Best) |
+| BERT                 | **58.46%** (Best) |
 
 *BERT outperformed traditional models due to its contextual understanding of movie descriptions.*
 
